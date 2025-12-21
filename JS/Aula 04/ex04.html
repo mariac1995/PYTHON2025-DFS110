@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex04.</title>
+    <style>
+      .vogal {
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contador de Vogais</h1>
+
+    <script>
+      let quantidadeVogais = 0;
+
+      const vogais = "aeiou";
+      const texto = prompt("Digite um texto para contar as vogais.");
+
+      document.write('<p>Texto: "');
+
+      for (let caractere of texto) {
+        if (vogais.includes(caractere.toLowerCase())) {
+          quantidadeVogais++;
+          document.write(`<span class="vogal">${caractere}</span>`);
+        } else {
+          document.write(caractere);
+        }
+      }
+
+      document.writeln('"</p>');
+
+      document.writeln(`<p> O texto tem ${quantidadeVogais} vogais. </p>`);
+    </script>
+  </body>
+</html>
